@@ -750,7 +750,7 @@ void VUShared::CLIP(CMipsJitter* codeGen, uint8 nFs, uint8 nFt, uint32 relativeP
 	}
 
 	codeGen->PushRel(tempOffset);
-	QueueInFlagPipeline(g_pipeInfoClip, codeGen, LATENCY_MAC, relativePipeTime);
+	QueueInFlagPipeline(g_pipeInfoClip, codeGen, 3, relativePipeTime);
 }
 
 void VUShared::DIV(CMipsJitter* codeGen, uint8 nFs, uint8 nFsf, uint8 nFt, uint8 nFtf, uint32 relativePipeTime)
