@@ -10,10 +10,9 @@ project(PlayUI)
 
 add_definitions(-DPLAY_VERSION="${PROJECT_Version}")
 
-set(USE_GSH_VULKAN OFF)
 if(NOT TARGET_PLATFORM_UNIX_AARCH64)
-	find_package(Vulkan)
-	if(Vulkan_FOUND)
+	if (USE_GSH_VULKAN)
+		find_package(Vulkan REQUIRED)
 		set(USE_GSH_VULKAN ON)
 		message("Building with Vulkan support.")
 	else()
