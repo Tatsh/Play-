@@ -23,7 +23,7 @@ if(NOT TARGET Framework_Http)
 endif()
 list(APPEND SHARED_UI_PROJECT_LIBS Framework_Http)
 
-find_package(nlohmann_json QUIET)
+find_package(nlohmann_json QUIET REQUIRED)
 if(NOT nlohmann_json_FOUND)
 	MESSAGE("-- Using Provided nlohmann_json source")
 	if(NOT TARGET nlohmann_json)
